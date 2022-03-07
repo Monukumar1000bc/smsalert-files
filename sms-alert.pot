@@ -1,0 +1,1435 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SMSAlert - WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-26 14:54+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.1; wp-4.9.18\n"
+"X-Domain: sms-alert"
+
+#. %1$s - Time, e.g. 1 minute, 5 hours
+#: helper/abandoned-cart.php:754
+#, php-format
+msgid "%1$s ago"
+msgstr ""
+
+#: helper/wc-integration.php:480
+#, php-format
+msgid ""
+"%s a new bid for auction %s has been submitted by %s. The new bid is: %s. "
+"Please visit the auction %s"
+msgstr ""
+
+#: classes/setting-options.php:680
+#, php-format
+msgid "%s contacts synced"
+msgstr ""
+
+#: helper/booking-calendar.php:110
+#, php-format
+msgid "%s status of booking has been changed to %s."
+msgstr ""
+
+#: helper/learnpress.php:399 helper/woocommerce-booking.php:84
+#, php-format
+msgid "%s status of order %s has been changed to %s."
+msgstr ""
+
+#: helper/messages.php:116
+#, php-format
+msgid ""
+"%s You have a new subscription %s for subscription value Rs. %s. Please "
+"check your admin dashboard for complete details.%sPowered by%swww.smsalert."
+"co.in"
+msgstr ""
+
+#: helper/messages.php:117
+#, php-format
+msgid "%s Your subscription %s Rs. %s. is %s.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:94
+#, php-format
+msgid "%s: A new %s has signed up on %s.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:93
+#, php-format
+msgid ""
+"%s: commission has been %s for %s to affiliate account %s against order %s."
+"%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:88
+#, php-format
+msgid "%s: Dear %s, new Contact from %s on %s.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:84
+#, php-format
+msgid ""
+"%s: Hello %s, you have been assigned a new delivery for %s%s.%sPowered "
+"by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:26
+#, php-format
+msgid "%s: Hello, %s is trying to place order %s value Rs. %s"
+msgstr ""
+
+#: helper/messages.php:104
+#, php-format
+msgid ""
+"%s: Hi Admin %s has enrolled course - %s%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:101
+#, php-format
+msgid "%s: Hi Admin %s has finished course %s%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:103
+#, php-format
+msgid ""
+"%s: Hi admin, an instructor %s has been joined.%sPowered by%swww.smsalert.co."
+"in"
+msgstr ""
+
+#: helper/messages.php:35
+#, php-format
+msgid ""
+"%s: Low Stock Alert For Product %s, current stock %s.%sPowered by%swww."
+"smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:34
+#, php-format
+msgid ""
+"%s: Out Of Stock Alert For Product %s, current stock %s.%sPowered by%swww."
+"smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:36
+#, php-format
+msgid "%s: Product %s is left in cart by %s.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:91
+#, php-format
+msgid ""
+"%s: status of affiliate %s has been changed to %s.%sPowered by%swww.smsalert."
+"co.in"
+msgstr ""
+
+#: helper/messages.php:76 helper/messages.php:112 helper/messages.php:113
+#, php-format
+msgid ""
+"%s: status of booking %s has been changed to %s.%sPowered by%swww.smsalert."
+"co.in"
+msgstr ""
+
+#: helper/messages.php:39
+#, php-format
+msgid "%s: status of order %s has been changed to %s."
+msgstr ""
+
+#: helper/messages.php:66 helper/messages.php:81
+#, php-format
+msgid ""
+"%s: status of order %s has been changed to %s.%sPowered by%swww.smsalert.co."
+"in"
+msgstr ""
+
+#: helper/messages.php:29
+#, php-format
+msgid ""
+"%s: You have a new order %s for order value Rs. %s. Please check your admin "
+"dashboard for complete details.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:25
+#, php-format
+msgid "%s: Your order %s Rs. %s. is Cancelled.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:28
+#, php-format
+msgid "%s: Your order %s Rs. %s. is completed."
+msgstr ""
+
+#: helper/messages.php:27
+#, php-format
+msgid "%s: Your order %s Rs. %s. is On Hold Now."
+msgstr ""
+
+#: handler/smsalert_phone_logic.php:93
+#, php-format
+msgid ""
+"%sphone%s is not a valid phone number. Please enter a valid Phone Number"
+msgstr ""
+
+#: classes/setting-options.php:861
+#, php-format
+msgid ""
+"*Changing of SMS text is not allowed in Demo. This message may not get "
+"Delivered <a href=\"javascript:void(0)\" class=\"reset_text\">%s</a>."
+"%sIndian users need to register on DLT to use SMS Services. <a href=\"%s\" "
+"target=\"_blank\">Know more</a>"
+msgstr ""
+
+#: classes/setting-options.php:860
+msgid "*Please replace {#var#} with plugin variables."
+msgstr ""
+
+#: views/otp-section-template.php:106
+msgid "2 Factor Authentication"
+msgstr ""
+
+#: views/support.php:13
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">Browse</a> Documentation"
+msgstr ""
+
+#: views/support.php:23
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">Click Here</a> to generate ticket. "
+msgstr ""
+
+#: classes/setting-options.php:727
+#, php-format
+msgid "<a href=\"%s\" target=\"_blank\">Click Here</a> to purchase. "
+msgstr ""
+
+#: template/ab-cart-exit-intent.php:27
+#, php-format
+msgid ""
+"<h2 style=\"color: %s\" >You were not leaving your cart just like that, "
+"right?</h2>"
+msgstr ""
+
+#: template/ab-cart-exit-intent.php:30
+#, php-format
+msgid ""
+"<p style=\"color: %s\" >Just enter your mobile number below to save your "
+"shopping cart for later. And, who knows, maybe we will even send you a sweet "
+"discount code :)</p>"
+msgstr ""
+
+#: handler/forms/wp-login.php:395
+msgid ""
+"A new security system has been enabled for you. Please register your phone "
+"to continue."
+msgstr ""
+
+#: helper/messages.php:51
+#, php-format
+msgid ""
+"A OTP (One Time Passcode) has been sent to %s. Please enter the OTP in the "
+"field below to verify your phone."
+msgstr ""
+
+#: helper/abandoned-cart.php:271
+msgid "Abandoned Cart"
+msgstr ""
+
+#: classes/setting-options.php:197
+msgid "Abandoned Carts"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:112
+msgid "Add custom image"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:61 views/renewal-template.php:54
+msgid "Add New"
+msgstr ""
+
+#: views/smsalert_general_tab.php:79
+msgid "Admin order sms notifications will be sent to this number."
+msgstr ""
+
+#: views/smsalert_nav_tabs.php:36
+msgid "Advanced Settings"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:27
+msgid "After 1 hour"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:24
+msgid "After 10 minutes"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:28
+msgid "After 2 hours"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:25
+msgid "After 20 minutes"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:29
+msgid "After 3 hours"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:26
+msgid "After 30 minutes"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:30
+msgid "After 4 hours"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:31
+msgid "After 5 hours"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:32
+msgid "After 6 hours"
+msgstr ""
+
+#: classes/setting-options.php:831
+msgid "Alert"
+msgstr ""
+
+#: classes/setting-options.php:604
+msgid "Alerts"
+msgstr ""
+
+#: views/otp-section-template.php:95
+msgid "Allow multiple accounts with same mobile number"
+msgstr ""
+
+#: handler/forms/ultimate-member.php:131
+#: handler/forms/user-registration.php:111
+#: handler/forms/woocommerce/wc-checkout.php:89
+msgid "An account is already registered with this mobile number. Please login."
+msgstr ""
+
+#: classes/setting-options.php:807
+msgid "Are you sure?"
+msgstr ""
+
+#: template/login_with_otp_form.php:12
+msgid "Back"
+msgstr ""
+
+#: helper/backinstock.php:39 helper/backinstock.php:50
+msgid "Backorders"
+msgstr ""
+
+#: views/renewal-template.php:24
+msgid "Before 1 days"
+msgstr ""
+
+#: views/renewal-template.php:25
+msgid "Before 2 days"
+msgstr ""
+
+#: views/renewal-template.php:26
+msgid "Before 3 days"
+msgstr ""
+
+#: views/renewal-template.php:27
+msgid "Before 4 days"
+msgstr ""
+
+#: views/renewal-template.php:28
+msgid "Before 5 days"
+msgstr ""
+
+#: helper/abandoned-cart.php:616
+msgid "Cart contents"
+msgstr ""
+
+#: helper/abandoned-cart.php:617
+msgid "Cart total"
+msgstr ""
+
+#: template/reset-password-template.php:17
+#: template/reset-password-template.php:33
+msgid "Change Password"
+msgstr ""
+
+#: views/message-template.php:69
+msgid "Click Here"
+msgstr ""
+
+#: helper/messages.php:105 helper/messages.php:106 helper/messages.php:110
+#, php-format
+msgid ""
+"Congratulation %s, you have become an instructor with %s.%sPowered by%swww."
+"smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:98
+#, php-format
+msgid ""
+"Congratulation %s, you have enrolled course %s with %s%sPowered by%swww."
+"smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:102
+#, php-format
+msgid ""
+"Congratulation you have finished course %s with %s%sPowered by%swww.smsalert."
+"co.in"
+msgstr ""
+
+#. Author of the plugin
+msgid "Cozy Vision Technologies Pvt. Ltd."
+msgstr ""
+
+#: classes/setting-options.php:669 views/cf7-template.php:127
+msgid "Create Group"
+msgstr ""
+
+#: classes/setting-options.php:717
+msgid "Credits"
+msgstr ""
+
+#: views/smsalert_general_tab.php:66
+msgid "Custom"
+msgstr ""
+
+#: classes/setting-options.php:625
+msgid "Daily Balance Alert"
+msgstr ""
+
+#: classes/setting-options.php:686
+msgid "Danger Zone"
+msgstr ""
+
+#: views/review-template.php:44
+msgid "Days when order is marked as"
+msgstr ""
+
+#: helper/messages.php:107
+#, php-format
+msgid ""
+"Dear %s, thank you for scheduling your booking with %s.%sPowered by%swww."
+"smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:59
+#, php-format
+msgid ""
+"Dear %s, your account with %s has been approved.%sPowered by%swww.smsalert."
+"co.in"
+msgstr ""
+
+#: helper/messages.php:61
+#, php-format
+msgid ""
+"Dear %s, your account with %s has been rejected.%sPowered by%swww.smsalert."
+"co.in"
+msgstr ""
+
+#: classes/setting-options.php:585
+msgid "Default Country"
+msgstr ""
+
+#: helper/abandoned-cart.php:640 helper/abandoned-cart.php:798
+msgid "Delete"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:36 views/renewal-template.php:29
+msgid "Disable notifications"
+msgstr ""
+
+#: views/otp-section-template.php:18
+msgid "disable pre-order verification"
+msgstr ""
+
+#: views/smsalert_general_tab.php:39
+msgid "display name for SMS's to be sent"
+msgstr ""
+
+#: SMSAlert-wc-order-sms.php:269
+msgid "Docs"
+msgstr ""
+
+#: classes/setting-options.php:1038
+#, php-format
+msgid ""
+"Don't have an account on SMS Alert? <a href=\"%s\" target=\"_blank\">Signup "
+"Here for FREE</a> "
+msgstr ""
+
+#: helper/abandoned-cart.php:613
+msgid "Email"
+msgstr ""
+
+#: views/support.php:32
+msgid "Email Support"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:132
+msgid "Enable Admin Message When A Job Approved"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:136
+msgid "Enable Admin Message When Job Edited"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:140
+msgid "Enable Admin Message When New Application Submitted"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:128
+msgid "Enable Admin Message When New Job Submitted"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:160
+msgid "Enable Candidate Message When New Application Submitted"
+msgstr ""
+
+#: classes/setting-options.php:596
+msgid "Enable Country Code Selection"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:148
+msgid "Enable Employer Message When A Job Approved"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:152
+msgid "Enable Employer Message When Job Edited"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:156
+msgid "Enable Employer Message When New Application Submitted"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:144
+msgid "Enable Employer Message When New Job Submitted"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:68
+msgid "Enable Exit Intent:"
+msgstr ""
+
+#: views/otp-section-template.php:28
+msgid "Enable OTP only for Selected Payment Options"
+msgstr ""
+
+#: classes/setting-options.php:634
+msgid "Enable Short Url"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:129
+msgid "Enable test mode:"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:126
+msgid "Enable to send sms notification to admin as well as employer"
+msgstr ""
+
+#: template/otp-popup-hasnophoneno.php:42
+msgid "Enter a number in the following format"
+msgstr ""
+
+#: handler/forms/cf7.php:229 handler/forms/ninja.php:124
+msgid "Enter a number in the following format : 9xxxxxxxxx"
+msgstr ""
+
+#: helper/backinstock.php:80 template/backinstock-template.php:17
+#: handler/forms/wp-login.php:188
+msgid "Enter Number Here"
+msgstr ""
+
+#: handler/forms/woocommerce/wc-checkout.php:325
+msgid "Enter Verification Code"
+msgstr ""
+
+#: views/otp-section-template.php:117
+msgid "Exclude Role from LOGIN OTP"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:84
+msgid "Exit Intent colors:"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:99
+msgid "Exit Intent image:"
+msgstr ""
+
+#: views/smsalert_nav_tabs.php:10
+msgid "General Settings"
+msgstr ""
+
+#: template/otp-popup-hasnophoneno.php:29 template/register-otp-template.php:18
+#: template/reset-password-template.php:18
+msgid "Go Back"
+msgstr ""
+
+#: helper/wc-integration.php:455
+#, php-format
+msgid ""
+"Hello %s, a new bid for auction %s has just been submitted. The new bid is: "
+"%s. Please visit the auction %s"
+msgstr ""
+
+#: helper/messages.php:49
+#, php-format
+msgid ""
+"Hello %s, a new note has been added to your order %s on %s: %s%sPowered "
+"by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/learnpress.php:389
+#, php-format
+msgid "Hello %s, status of your %s with %s has been changed to %s."
+msgstr ""
+
+#: helper/messages.php:64
+#, php-format
+msgid ""
+"Hello %s, status of your %s with %s has been changed to %s.%sPowered by%swww."
+"smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:53
+#, php-format
+msgid ""
+"Hello %s, status of your affiliate account %s with %s has been changed to %s."
+"%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/woocommerce-booking.php:59
+#, php-format
+msgid "Hello %s, status of your booking %s with %s has been changed to %s."
+msgstr ""
+
+#: helper/messages.php:74
+#, php-format
+msgid ""
+"Hello %s, status of your booking %s%s with %s has been changed to %s."
+"%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:48 helper/messages.php:79
+#, php-format
+msgid ""
+"Hello %s, status of your order %s with %s has been changed to %s.%sPowered "
+"by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:108
+#, php-format
+msgid ""
+"Hello %s, status of your order with %s has been changed to confirmed."
+"%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:109
+#, php-format
+msgid ""
+"Hello %s, status of your order with %s has been changed to rejected."
+"%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:100
+#, php-format
+msgid ""
+"Hello %s, status of your RMA no. %s with %s has been changed to %s.%sPowered "
+"by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:119
+#, php-format
+msgid ""
+"Hello %s, status of your subscription %s with %s has been changed to %s."
+"%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/wc-integration.php:463
+#, php-format
+msgid ""
+"Hello %s, Thank You for placing bid for %s. Your bid is %s. Please visit the "
+"auction %s"
+msgstr ""
+
+#: helper/messages.php:30
+#, php-format
+msgid "Hello %s, thank you for placing your order %s with %s."
+msgstr ""
+
+#: helper/messages.php:99
+#, php-format
+msgid "Hello %s, Thank you for registering with %s."
+msgstr ""
+
+#: helper/messages.php:90
+#, php-format
+msgid ""
+"Hello %s, Thank you for submitting on %s.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:118
+#, php-format
+msgid ""
+"Hello %s, thank you for subscribing %s with %s.%sPowered by%swww.smsalert.co."
+"in"
+msgstr ""
+
+#: helper/messages.php:120
+#, php-format
+msgid ""
+"Hello %s, this is reminder of your subscription %s with %s.%sPowered by%swww."
+"smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:24
+#, php-format
+msgid ""
+"Hello %s, you are just one step away from placing your order, please "
+"complete your payment, to proceed."
+msgstr ""
+
+#: helper/messages.php:33
+#, php-format
+msgid ""
+"Hello %s, your order %s with %s has been cancelled due to some un-avoidable "
+"conditions. Sorry for the inconvenience caused."
+msgstr ""
+
+#: helper/messages.php:31
+#, php-format
+msgid ""
+"Hello %s, your order %s with %s has been dispatched and shall deliver to you "
+"shortly."
+msgstr ""
+
+#: helper/messages.php:32
+#, php-format
+msgid ""
+"Hello %s, your order %s with %s has been put on hold, our team will contact "
+"you shortly with more details."
+msgstr ""
+
+#: helper/messages.php:92
+#, php-format
+msgid ""
+"Hello %s,commission has been %s for %s to your affiliate account %s against "
+"order %s.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:69
+#, php-format
+msgid ""
+"Hello, %s is now available, you can order it on %s.%sPowered by%swww."
+"smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:37 helper/messages.php:38
+#, php-format
+msgid ""
+"Hey %s, We noticed you could not complete your order. Click on the link "
+"below to place your order. Shop Now - %s%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:56
+#, php-format
+msgid ""
+"Hi %s, thank you for your recent order on %s. Can you take 1 minute to leave "
+"a review about your experience with us? %s.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: views/otp-section-template.php:151
+msgid "Hide default Login form"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://wordpress.org/plugins/sms-alert/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.smsalert.co.in"
+msgstr ""
+
+#: helper/abandoned-cart.php:611
+msgid "ID"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:136
+msgid ""
+"If Enabled, go to your store and add a product to your shopping cart. Please "
+"note that only users with Admin rights will be able to see the Exit Intent "
+"and appearance limits have been removed - it will be shown each time you try "
+"to leave your shop."
+msgstr ""
+
+#: views/ab-cart-setting-template.php:92
+msgid ""
+"If you leave the Inverse color empty, it will automatically use the inverse "
+"color of <br/>the main color you have picked. Clear both colors to use the "
+"default colors."
+msgstr ""
+
+#: views/support.php:50
+msgid "If you like"
+msgstr ""
+
+#: helper/backinstock.php:82 helper/shortcode.php:265
+#: handler/forms/wp-login.php:191
+msgid "Invalid country code"
+msgstr ""
+
+#: helper/backinstock.php:81 helper/shortcode.php:264
+#: handler/forms/wp-login.php:190
+msgid "Invalid number"
+msgstr ""
+
+#: helper/messages.php:16
+msgid "Invalid one time passcode. Please enter a valid passcode."
+msgstr ""
+
+#: views/ab-cart-setting-template.php:90
+msgid "Inverse:"
+msgstr ""
+
+#: views/otp-section-template.php:216
+#, php-format
+msgid "It is mandatory to include %s tag in template content."
+msgstr ""
+
+#. %s - Cron event name
+#: helper/abandoned-cart.php:345
+#, php-format
+msgid ""
+"It seems that WP Cron event <strong>%s</strong> required for automation is "
+"not scheduled."
+msgid_plural ""
+"It seems that WP Cron events <strong>%s</strong> required for automation are "
+"not scheduled."
+msgstr[0] ""
+msgstr[1] ""
+
+#. %d - Item count
+#: helper/abandoned-cart.php:266
+#, php-format
+msgid "Items deleted: %d"
+msgstr ""
+
+#: views/otp-section-template.php:219
+msgid "length of OTP, default is 4, accepted values between 3 and 8,"
+msgstr ""
+
+#: helper/abandoned-cart.php:615
+msgid "Location"
+msgstr ""
+
+#: views/otp-section-template.php:142
+msgid "Login With OTP"
+msgstr ""
+
+#: template/login_with_otp_form.php:10 handler/forms/wp-login.php:143
+#: handler/forms/wp-login.php:143
+msgid "Login with OTP"
+msgstr ""
+
+#: views/smsalert_general_tab.php:48
+msgid "Logout"
+msgstr ""
+
+#: helper/abandoned-cart.php:280
+msgid ""
+"Looks like you do not have any saved Abandoned carts yet.<br/>But do not "
+"worry, as soon as someone fills the <strong>Phone number</strong> fields of "
+"your WooCommerce Checkout form and abandons the cart, it will automatically "
+"appear here."
+msgstr ""
+
+#: classes/setting-options.php:616
+msgid "Low Balance Alert"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:88
+msgid "Main:"
+msgstr ""
+
+#: views/otp-section-template.php:203
+msgid "Max OTP Re-send Allowed"
+msgstr ""
+
+#: helper/curl.php:118
+msgid "Maximum OTP limit exceeded"
+msgstr ""
+
+#: template/login_with_otp_form.php:2
+msgid "Mobile Number"
+msgstr ""
+
+#: helper/abandoned-cart.php:780
+msgid "MSG Sent"
+msgstr ""
+
+#: helper/abandoned-cart.php:612
+msgid "Name, Surname"
+msgstr ""
+
+#: classes/setting-options.php:725
+msgid "Need More credits?"
+msgstr ""
+
+#: helper/abandoned-cart.php:776
+msgid "New"
+msgstr ""
+
+#: helper/backinstock.php:96 template/backinstock-template.php:26
+#: template/backinstock-template.php:26
+msgid "Notify Me"
+msgstr ""
+
+#: template/backinstock-template.php:13
+msgid "Notify Me when back in stock"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:34
+msgid "Once a day"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:35
+msgid "Once every 2 days"
+msgstr ""
+
+#: classes/setting-options.php:690
+msgid "Once you reset templates, there is no going back. Please be certain."
+msgstr ""
+
+#: helper/messages.php:10
+msgid "Only digits within range 4-8 are allowed."
+msgstr ""
+
+#: views/otp-section-template.php:217
+msgid "Optional Attributes"
+msgstr ""
+
+#: views/otp-section-template.php:4
+msgid "OTP for Checkout"
+msgstr ""
+
+#: views/otp-section-template.php:80
+msgid "OTP for Registration"
+msgstr ""
+
+#: views/otp-section-template.php:172
+msgid "OTP For Reset Password"
+msgstr ""
+
+#: views/otp-section-template.php:197
+msgid "OTP Re-send Timer"
+msgstr ""
+
+#: views/smsalert_nav_tabs.php:33
+msgid "OTP Settings"
+msgstr ""
+
+#: views/otp-section-template.php:211
+msgid "OTP Template"
+msgstr ""
+
+#: views/otp-section-template.php:179
+msgid "OTP Template Style"
+msgstr ""
+
+#: views/otp-section-template.php:69
+msgid "OTP Verify Button Text"
+msgstr ""
+
+#: handler/forms/ultimate-member.php:97
+msgid "Password Changed Successfully."
+msgstr ""
+
+#: helper/messages.php:20
+msgid "Passwords do not match."
+msgstr ""
+
+#: helper/abandoned-cart.php:614 helper/messages.php:15
+msgid "Phone"
+msgstr ""
+
+#: handler/forms/wp-login.php:415
+msgid "Phone Number is already in use. Please use another number."
+msgstr ""
+
+#: helper/curl.php:136
+msgid "phone number not valid"
+msgstr ""
+
+#: views/support.php:43
+msgid "Phone Support"
+msgstr ""
+
+#: classes/setting-options.php:817
+msgid "Please add OTP tag in OTP Template."
+msgstr ""
+
+#: helper/messages.php:18
+msgid "Please change Your password"
+msgstr ""
+
+#: classes/setting-options.php:818
+msgid "Please choose any payment gateway."
+msgstr ""
+
+#: classes/setting-options.php:821
+msgid "Please choose your senderid."
+msgstr ""
+
+#: classes/setting-options.php:442
+#, php-format
+msgid ""
+"Please contact <a href=\"mailto:%s\">%s</a> to activate your Demo Account."
+msgstr ""
+
+#: views/message-template.php:69
+msgid "Please enable Email Notification at Cart Bounty Setting page."
+msgstr ""
+
+#: handler/forms/woocommerce/wc-checkout.php:367
+#: handler/forms/woocommerce/wc-checkout.php:374
+msgid "Please Enter a Phone Number to enable this link"
+msgstr ""
+
+#: handler/forms/wp-login.php:189
+msgid "Please enter mobile number."
+msgstr ""
+
+#: helper/messages.php:17
+msgid "Please enter the verification code sent to your phone."
+msgstr ""
+
+#: helper/messages.php:19
+msgid "Please enter your password."
+msgstr ""
+
+#: views/support.php:50
+msgid "please leave us a"
+msgstr ""
+
+#: helper/backinstock.php:83 helper/shortcode.php:266
+#: handler/forms/wp-login.php:192
+msgid "Please provide a valid Number"
+msgstr ""
+
+#. %1$s - Plugin name, %2$s - Link
+#: helper/abandoned-cart.php:348
+#, php-format
+msgid ""
+"Please try disabling and enabling %1$s plugin. If this notice does not go "
+"away after that, please <a href=\"https://wordpress.org/support/plugin/sms-"
+"alert/\" target=\"_blank\">get in touch with us</a>."
+msgstr ""
+
+#: helper/backinstock.php:79 helper/shortcode.php:262
+#: handler/forms/ninja.php:132 handler/forms/user-registration.php:57
+#: handler/forms/wp-login.php:187
+msgid "Please wait..."
+msgstr ""
+
+#: views/smsalert_general_tab.php:67
+msgid "Post Author"
+msgstr ""
+
+#: views/otp-section-template.php:18
+msgid "Post Order Verification "
+msgstr ""
+
+#: views/ab-cart-setting-template.php:120
+msgid "Recommended size: 1024 x 600 px."
+msgstr ""
+
+#: helper/abandoned-cart.php:783
+msgid "Recovered"
+msgstr ""
+
+#: handler/forms/woocommerce/wc-registration.php:155
+msgid "Register"
+msgstr ""
+
+#: views/otp-section-template.php:88
+msgid "Register OTP in Popup"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:39 views/renewal-template.php:32
+msgid "Remove"
+msgstr ""
+
+#: helper/wc-subscriptions.php:361
+msgid "Renewal"
+msgstr ""
+
+#: helper/messages.php:14 template/otp-popup-1.php:21
+#: template/otp-popup-2.php:35
+msgid "Resend"
+msgstr ""
+
+#: helper/messages.php:12
+msgid "Resend OTP"
+msgstr ""
+
+#: classes/setting-options.php:691
+msgid "Reset all Templates & Setiings"
+msgstr ""
+
+#: helper/return-warranty.php:151
+msgid "Return & Warranty"
+msgstr ""
+
+#: template/ab-cart-exit-intent.php:34
+msgid "Save cart"
+msgstr ""
+
+#: views/otp-section-template.php:199
+msgid "Seconds"
+msgstr ""
+
+#: helper/backinstock.php:322
+msgid "Seems like you have already subscribed to this product"
+msgstr ""
+
+#: classes/setting-options.php:651 views/cf7-template.php:109
+#: views/smsalert_general_tab.php:37
+msgid "SELECT"
+msgstr ""
+
+#: handler/forms/woocommerce/wc-checkout.php:994
+msgid "Select Template"
+msgstr ""
+
+#: views/smsalert_general_tab.php:61
+msgid "Send Admin SMS To"
+msgstr ""
+
+#: handler/forms/woocommerce/wc-checkout.php:1005
+msgid "Send an SMS to the billing phone number for this order."
+msgstr ""
+
+#: views/review-template.php:61
+msgid "Send At"
+msgstr ""
+
+#: helper/messages.php:11
+msgid "Send OTP"
+msgstr ""
+
+#: views/renewal-template.php:15
+msgid "Send Renewal Reminder"
+msgstr ""
+
+#: views/review-template.php:39
+msgid "Send Review SMS after"
+msgstr ""
+
+#: handler/forms/woocommerce/wc-checkout.php:1005
+msgid "Send SMS"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:15
+msgid "Send sms to abandoned cart"
+msgstr ""
+
+#: views/otp-section-template.php:220
+msgid ""
+"set how many times otp message can be sent in specific time default is 5,"
+msgstr ""
+
+#: views/otp-section-template.php:221
+msgid "set validity of the OTP default is 15 minutes"
+msgstr ""
+
+#: helper/wc-integration.php:205
+#, php-format
+msgid ""
+"Shipped: %s has been dispatched via %s with tracking number %s. Track here %s"
+msgstr ""
+
+#: helper/abandoned-cart.php:772
+msgid "Shopping"
+msgstr ""
+
+#: views/otp-section-template.php:134
+msgid "Show OTP in Popup"
+msgstr ""
+
+#: views/otp-section-template.php:47
+msgid "Show Verify Button next to phone field"
+msgstr ""
+
+#: handler/forms/woocommerce/wc-registration.php:376
+msgid "Sign Up Notifications"
+msgstr ""
+
+#: views/support.php:50
+msgid "SMS ALERT"
+msgstr ""
+
+#: views/smsalert_general_tab.php:16
+msgid "SMS Alert Password"
+msgstr ""
+
+#: views/smsalert_general_tab.php:28
+msgid "SMS Alert Sender Id"
+msgstr ""
+
+#: views/smsalert_general_tab.php:5
+msgid "SMS Alert Username"
+msgstr ""
+
+#: views/smsalert_nav_tabs.php:39
+msgid "SMS Credits"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:126
+msgid "SMS Notification"
+msgstr ""
+
+#. Name of the plugin
+msgid "SMSAlert - WooCommerce"
+msgstr ""
+
+#: helper/messages.php:96
+msgid "Sorry, but you do not have a registered phone number."
+msgstr ""
+
+#: helper/abandoned-cart.php:619
+msgid "Status"
+msgstr ""
+
+#: helper/wc-low-stock.php:20
+msgid "Stock Notifications"
+msgstr ""
+
+#: helper/wc-subscriptions.php:32
+msgid "Subscriptions"
+msgstr ""
+
+#: views/smsalert_nav_tabs.php:42
+msgid "Support"
+msgstr ""
+
+#: classes/setting-options.php:643
+msgid "Sync Customers To Group"
+msgstr ""
+
+#: classes/setting-options.php:679
+msgid "Sync users to a Group in smsalert.co.in"
+msgstr ""
+
+#: views/otp-section-template.php:215
+msgid "Template to be used for sending OTP"
+msgstr ""
+
+#: handler/forms/woocommerce/wc-checkout.php:1357
+msgid "Thank you, Your mobile number has been verified successfully."
+msgstr ""
+
+#: helper/messages.php:45
+#, php-format
+msgid "Thanks for purchasing%sYour %s is now %sThank you"
+msgstr ""
+
+#: views/support.php:50
+msgid "Thanks in advance."
+msgstr ""
+
+#: helper/messages.php:97
+msgid ""
+"The phone number OTP was sent to and the phone number in contact submission "
+"do not match."
+msgstr ""
+
+#: handler/smsalert_phone_logic.php:88
+#, php-format
+msgid ""
+"There was an error in sending the OTP to the given Phone Number. Please Try "
+"Again or contact site Admin. If you are the website admin, please browse <a "
+"href='%s' target='_blank'> here</a> for steps to resolve this error."
+msgstr ""
+
+#: classes/setting-options.php:808
+msgid ""
+"This action can not be reversed. You will be logged out of SMS Alert plugin."
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This is a WooCommerce add-on. By Using this plugin admin and buyer can get "
+"notification after placing order via sms using SMS Alert."
+msgstr ""
+
+#: helper/abandoned-cart.php:618
+msgid "Time"
+msgstr ""
+
+#: views/otp-section-template.php:206
+msgid "Times"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:33
+msgid "Twice a day"
+msgstr ""
+
+#. %d - Product ID
+#: helper/abandoned-cart.php:557
+#, php-format
+msgid ""
+"Unable to restore product in the shopping cart since the product no longer "
+"exists. ID: %d"
+msgstr ""
+
+#: views/otp-section-template.php:62
+msgid "Validate Form Before Sending OTP"
+msgstr ""
+
+#: helper/messages.php:13 template/register-otp-template.php:28
+msgid "Validate OTP"
+msgstr ""
+
+#: template/register-otp-template.php:17
+msgid "Validate OTP (One Time Passcode)"
+msgstr ""
+
+#: template/otp-popup-hasnophoneno.php:27
+msgid "Validate your Phone Number"
+msgstr ""
+
+#: classes/setting-options.php:822
+msgid "Value must be greater than 0 and less than 5."
+msgstr ""
+
+#: classes/setting-options.php:820
+msgid "Value must be greater than 15 and less than 300."
+msgstr ""
+
+#: classes/setting-options.php:823
+msgid "Value must be greater than or equal to 500."
+msgstr ""
+
+#: handler/forms/ninja.php:86
+msgid "Verify & Submit"
+msgstr ""
+
+#: classes/setting-options.php:1035
+msgid "verify and continue"
+msgstr ""
+
+#: template/otp-popup-hasnophoneno.php:46
+#: handler/forms/woocommerce/wc-checkout.php:323
+msgid "Verify Code "
+msgstr ""
+
+#: handler/forms/woocommerce/wc-checkout.php:198
+#: handler/forms/woocommerce/wc-checkout.php:214
+msgid "Verify Code is a required field"
+msgstr ""
+
+#: views/otp-section-template.php:55
+msgid "Verify only Guest Checkout"
+msgstr ""
+
+#: views/otp-section-template.php:43
+msgid "Verify OTP in Popup"
+msgstr ""
+
+#: views/message-template.php:46
+msgid "View Drivers"
+msgstr ""
+
+#: views/ab-cart-setting-template.php:147
+msgid "View List"
+msgstr ""
+
+#: views/message-template.php:53
+msgid "View Subscriber"
+msgstr ""
+
+#: helper/messages.php:71
+#, php-format
+msgid ""
+"We have noted your request and we will notify you as soon as %s is available "
+"for order with us.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: views/support.php:5
+msgid ""
+"We would be glad to help you. You can reach us through any of the three ways."
+msgstr ""
+
+#: helper/abandoned-cart.php:358
+msgid ""
+"WP Cron has been disabled. Several WordPress core features, such as checking "
+"for updates or sending notifications utilize this function. Please enable it "
+"or contact your system administrator to help you with this."
+msgstr ""
+
+#: helper/curl.php:144
+msgid "Wrong SMSAlert credentials"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:130 handler/forms/wp-jobs.php:134
+#: handler/forms/wp-jobs.php:138 handler/forms/wp-jobs.php:146
+#: handler/forms/wp-jobs.php:150 handler/forms/wp-jobs.php:154
+msgid ""
+"You can use following tokens [store_name], [job_id], [job_name] ,[username] ,"
+"[email] ,[phone]"
+msgstr ""
+
+#: handler/forms/wp-jobs.php:142 handler/forms/wp-jobs.php:158
+#: handler/forms/wp-jobs.php:164
+msgid ""
+"You can use following tokens [store_name], [job_id], [job_name] ,[username] ,"
+"[email] ,[phone] ,[candidate_name] ,[candidate_email]"
+msgstr ""
+
+#: helper/messages.php:111
+#, php-format
+msgid ""
+"You have a new booking from %s for %s %s. Please check admin dashboard for "
+"complete details.%sPowered by%swww.smsalert.co.in"
+msgstr ""
+
+#: helper/messages.php:44
+#, php-format
+msgid "You have a new Order%sThe %s is now %s"
+msgstr ""
+
+#: classes/setting-options.php:819
+msgid "You have entered an invalid email address in Advanced Settings option!"
+msgstr ""
+
+#: helper/backinstock.php:350
+msgid "You have subscribed successfully."
+msgstr ""
+
+#: template/ab-cart-exit-intent.php:32
+msgid "Your Mobile No:"
+msgstr ""
+
+#: views/smsalert_general_tab.php:22
+msgid "your SMS Alert password"
+msgstr ""
+
+#: views/smsalert_general_tab.php:12
+msgid "your SMS Alert user name"
+msgstr ""
+
+#: helper/messages.php:50
+#, php-format
+msgid "Your verification code for %s is %s"
+msgstr ""
+
+#: helper/messages.php:43
+#, php-format
+msgid "your verification code is %s. Only valid for %s min."
+msgstr ""
