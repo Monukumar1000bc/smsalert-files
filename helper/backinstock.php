@@ -941,8 +941,8 @@ function subscriber_page_handler() {
 	if ( 'delete' === $table_data->current_action() ) {
 		/* translators: %d: Number of items deleted */
 		$message = '<div class="updated below-h2" id="message"><p>' . sprintf( __( 'Items deleted: %d', 'custom_table_example' ), $cnt ) . '</p></div>';
-	}
-	?>
+	}?>
+	
 <div class="wrap">
 	<div class="icon32 icon32-posts-post" id="icon-edit"><br></div>
 	<h2>All Subscriber</h2>
@@ -951,5 +951,8 @@ function subscriber_page_handler() {
 		<input type="hidden" name="page" value="<?php echo esc_attr( empty( $_REQUEST['page'] ) ? '' : $_REQUEST['page'] ); ?>"/>
 		<?php $table_data->display(); ?>
 	</form>
+	<a href="<?php echo admin_url( 'admin.php?page=all-subscriber' ) ?>&action=download_csv&_wpnonce=<?php echo wp_create_nonce( 'download_csv' )?>" class="page-title-action"><?php _e('Export to CSV','my-plugin-slug');?></a>
+	
 </div>
-<?php } ?>
+    
+<?php}?>
