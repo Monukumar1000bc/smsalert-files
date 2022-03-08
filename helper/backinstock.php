@@ -943,22 +943,41 @@ function subscriber_page_handler() {
 		$message = '<div class="updated below-h2" id="message"><p>' . sprintf( __( 'Items deleted: %d', 'custom_table_example' ), $cnt ) . '</p></div>';
 	}
 	?>
+	<?php
+ $data_rows = array();
+		  global $wpdb;
+		  $sql = 'SELECT * FROM ' . $wpdb->posts;
+		//  $datas = $wpdb->get_results( $sql, 'ARRAY_A' );
+
+			$table_data = new All_Subscriber_List();
+			$datas       = $table_data->prepare_items();
+			foreach ( $datas as $data ) {
+				$row = array(
+					$data['post_title'],
+					$data['post_status']
+				);
+				$data_rows[] = $row;
+				echo "<pre>";
+				print_r($data_rows);
+
+				echo "<pre>";
+			}
+			
+			?>
 <!-- add script -->
 <script>  
-//create CSV file data in an array  
-var csvFileData = [  
-   ['Alan Walker', 'Singer'],  
-   ['Cristiano Ronaldo', 'Footballer'],  
-   ['Saina Nehwal', 'Badminton Player'],  
-   ['Arijit Singh', 'Singer'],  
-   ['Terence Lewis', 'Dancer']  
+// create CSV file data in an array  
+var csvFileData = [ 
+	
+	 <?php $data_rows;?>
+		
 ];  
     
 //create a user-defined function to download CSV file   
 function download_csv_file() {  
   
     //define the heading for each row of the data  
-    var csv = 'Name,Profession\n';  
+    var csv = 'mobile,status\n';  
       
     //merge the data with CSV  
     csvFileData.forEach(function(row) {  

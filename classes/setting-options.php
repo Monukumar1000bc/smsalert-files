@@ -499,7 +499,7 @@ class smsalert_Setting_Options {
 								</section>
 															
 								<?php } ?>
-							</div>
+							</div>				
 							<!--help links-->
 							<?php
 								
@@ -821,8 +821,11 @@ class smsalert_Setting_Options {
 					var tagInput1 	= new TagsInput({
 						selector: 'smsalert_message[sms_admin_phone]',
 						duplicate : false,
+						
+					 
 						max : 10,
 					});
+					
 					var number = (adminnumber!='') ? adminnumber.split(",") : [];
 					if(number.length > 0){
 						tagInput1.addData(number);
