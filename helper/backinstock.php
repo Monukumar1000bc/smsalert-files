@@ -954,13 +954,13 @@ function subscriber_page_handler() {
 			foreach ( $datas as $data ) {
 				$row = array(
 					$data['post_title'],
-					$data['post_status']
+					$data['post_status'],
 				);
 				$data_rows[] = $row;
-				echo "<pre>";
-				print_r($data_rows);
+				// echo "<pre>";
+				// print_r($data_rows);
 
-				echo "<pre>";
+				// echo "<pre>";
 			}
 			
 			?>
@@ -969,7 +969,7 @@ function subscriber_page_handler() {
 // create CSV file data in an array  
 var csvFileData = [ 
 	
-	 <?php $data_rows;?>
+	 <?php $data_rows	?>
 		
 ];  
     
