@@ -943,6 +943,43 @@ function subscriber_page_handler() {
 		$message = '<div class="updated below-h2" id="message"><p>' . sprintf( __( 'Items deleted: %d', 'custom_table_example' ), $cnt ) . '</p></div>';
 	}
 	?>
+<!-- add script -->
+<script>  
+//create CSV file data in an array  
+var csvFileData = [  
+   ['Alan Walker', 'Singer'],  
+   ['Cristiano Ronaldo', 'Footballer'],  
+   ['Saina Nehwal', 'Badminton Player'],  
+   ['Arijit Singh', 'Singer'],  
+   ['Terence Lewis', 'Dancer']  
+];  
+    
+//create a user-defined function to download CSV file   
+function download_csv_file() {  
+  
+    //define the heading for each row of the data  
+    var csv = 'Name,Profession\n';  
+      
+    //merge the data with CSV  
+    csvFileData.forEach(function(row) {  
+            csv += row.join(',');  
+            csv += "\n";  
+    });  
+   
+    //display the created CSV data on the web browser   
+    document.write(csv);  
+  
+     
+    var hiddenElement = document.createElement('a');  
+    hiddenElement.href = 'data:text/csv;charset=utf-8,' + encodeURI(csv);  
+    hiddenElement.target = '_blank';  
+      
+    //provide the name for the CSV file to be downloaded  
+    hiddenElement.download = 'Famous Personalities.csv';  
+    hiddenElement.click();  
+}  
+</script>  
+
 <div class="wrap">
 	<div class="icon32 icon32-posts-post" id="icon-edit"><br></div>
 	<h2>All Subscriber</h2>
@@ -951,5 +988,6 @@ function subscriber_page_handler() {
 		<input type="hidden" name="page" value="<?php echo esc_attr( empty( $_REQUEST['page'] ) ? '' : $_REQUEST['page'] ); ?>"/>
 		<?php $table_data->display(); ?>
 	</form>
+	<button onclick="download_csv_file()"> Download CSV </button>
 </div>
 <?php } ?>
