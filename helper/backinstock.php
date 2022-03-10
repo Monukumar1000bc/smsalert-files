@@ -956,7 +956,7 @@ function subscriber_page_handler() {
 					$data['post_title'],
 					$data['post_status'],
 				);
-				$data_rows[] = $row;
+				$data_rows[] = $row  ;
 				// echo "<pre>";
 				// print_r($data_rows);
 
@@ -967,11 +967,8 @@ function subscriber_page_handler() {
 <!-- add script -->
 <script>  
 // create CSV file data in an array  
-var csvFileData = [ 
-	
-	 <?php $data_rows	?>
-		
-];  
+var passedArray =[  <?php echo json_encode($data_rows) ; ?> ];  
+ 
     
 //create a user-defined function to download CSV file   
 function download_csv_file() {  
@@ -980,13 +977,13 @@ function download_csv_file() {
     var csv = 'mobile,status\n';  
       
     //merge the data with CSV  
-    csvFileData.forEach(function(row) {  
+    passedArray.forEach(function(row) {  
             csv += row.join(',');  
             csv += "\n";  
     });  
    
     //display the created CSV data on the web browser   
-    document.write(csv);  
+    // document.write(csv);  
   
      
     var hiddenElement = document.createElement('a');  
@@ -994,7 +991,7 @@ function download_csv_file() {
     hiddenElement.target = '_blank';  
       
     //provide the name for the CSV file to be downloaded  
-    hiddenElement.download = 'Famous Personalities.csv';  
+    hiddenElement.download = 'Subscriber.csv';  
     hiddenElement.click();  
 }  
 </script>  
