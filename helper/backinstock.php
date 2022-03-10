@@ -953,57 +953,10 @@ function subscriber_page_handler() {
 	</form>
 	
 	
-	<a href="<?php echo admin_url( 'admin.php?page=all-subscriber' ) ?>&action=download_csv&_wpnonce=<?php echo wp_create_nonce( 'download_csv' )?>" class="page-title-action"><?php _e('Export to CSV','my-plugin-slug');?></a>
+	<a href="exportdata.php" class="page-title-action"><?php _e('Export to CSV','my-plugin-slug');?></a>
 	 <?php
-	 if ( isset($_GET['action'] ) && $_GET['action']=='download_csv'){
-	  // Add action hook only if action=download_csv
 	
-		
-	  ob_start();
-
-	  $domain = $_SERVER['SERVER_NAME'];
-	  $filename = 'users-' . $domain . '-' . time() . '.csv';
-	  
-	  $header_row = array(
-		  'mobile nomber',
-		  'status'
-	  );
-	  print_r( $header_row);
-	  $data_rows = array();
-		  global $wpdb;
-		  $sql = 'SELECT * FROM ' . $wpdb->posts;
-		//  $datas = $wpdb->get_results( $sql, 'ARRAY_A' );
-
-			$table_data = new All_Subscriber_List();
-			$datas       = $table_data->prepare_items();
-			foreach ( $datas as $data ) {
-				$row = array(
-					$data['post_title'],
-					$data['post_status']
-				);
-				$data_rows[] = $row;
-			}
-			print_r ($row);
-			
-			// $fh = @fopen( 'php://output', 'w' );
-			// fprintf( $fh, chr(0xEF) . chr(0xBB) . chr(0xBF) );
-			// header( 'Cache-Control: must-revalidate, post-check=0, pre-check=0' );
-			// header( 'Content-Description: File Transfer' );
-			// header( 'Content-type: text/csv' );
-			// header( "Content-Disposition: attachment; filename={$filename}" );
-			// header( 'Expires: 0' );
-			// header( 'Pragma: public' );
-			// fputcsv( $fh, $header_row );
-			// foreach ( $data_rows as $data_row ) {
-			// 	fputcsv( $fh, $data_row );
-			// }
-			// fclose( $fh );
-			
-			// ob_end_flush();
-			
-			// die();
-		
-		}?>
+		 ?>
 	
 	
 
