@@ -675,6 +675,34 @@ class All_Subscriber_List extends WP_List_Table {
 
 		return $result;
 	}
+	/**
+	 * Get all subscriber info.
+	 *
+	 * @param int $per_page   Page size.
+	 * @param int $page_number Page number.
+	 *
+	 * @return array
+	 */
+	public static function get_all_subscriber_fetch(  ) {
+
+		global $wpdb;
+
+		$sql = "SELECT P.ID, P.post_author, P.post_title, P.post_status,P.post_content, PM.meta_value FROM {$wpdb->prefix}posts P inner join {$wpdb->prefix}postmeta PM on P.ID = PM.post_id WHERE P.post_type = 'sainstocknotifier' and PM.meta_key = 'smsalert_instock_pid'";
+
+		if ( ! empty( $_REQUEST['orderby'] ) ) {
+			$sql .= ' ORDER BY ' . sanitize_text_field( wp_unslash( $_REQUEST['orderby'] ) );
+			$sql .= ! empty( $_REQUEST['order'] ) ? ' ' . sanitize_text_field( wp_unslash( $_REQUEST['order'] ) ) : ' DESC';
+		} else {
+			$sql .= ' ORDER BY post_date desc';
+		}
+
+		// $sql .= " LIMIT $per_page";
+		// $sql .= ' OFFSET ' . ( $page_number - 1 ) * $per_page;
+
+		$result = $wpdb->get_results( $sql, 'ARRAY_A' );
+
+		return $result;
+	}
 
 	/**
 	 * Get nos subscribers by productId.
