@@ -983,7 +983,6 @@ class All_Subscriber_List extends WP_List_Table
 
 
 
-
 }?>
 <?php
 
@@ -993,10 +992,10 @@ class All_Subscriber_List extends WP_List_Table
      
 		$table_data = new All_Subscriber_List();
 		$data       = $table_data->get_all_subscriber_fetch();
-		// echo"<pre>";
-		// print_r($data);
-		// echo"</pre>";
-		// exit();
+		echo"<pre>";
+		print_r($data);
+		echo"</pre>";
+		exit();
 
 
 		$delimiter = ",";
@@ -1027,7 +1026,7 @@ class All_Subscriber_List extends WP_List_Table
 
 
 	}
-	exit;
+	
 
 /**
  * Adds a sub menu page for all subscribers.
@@ -1084,7 +1083,7 @@ function subscriber_page_handler()
 
 
 
-	?>
+	
 
 <?php
 
