@@ -984,7 +984,50 @@ class All_Subscriber_List extends WP_List_Table
 
 
 
-}
+}?>
+<?php
+
+	if(!empty($_REQUEST['action']) && $_REQUEST['action']=='download-subscriber')
+	{
+		
+     
+		$table_data = new All_Subscriber_List();
+		$data       = $table_data->get_all_subscriber_fetch();
+		// echo"<pre>";
+		// print_r($data);
+		// echo"</pre>";
+		// exit();
+
+
+		$delimiter = ",";
+		$filename = "members-data_" . date('y-m-d') . ".csv";
+		// create a file pointer
+		$f =fopen('php://memory', 'w');
+		// set column headers
+		$fields = array('Mobileno', 'status');
+		
+		
+		foreach ($data as $line) { 
+			// generate csv lines from the inner arrays
+			fputcsv($f, $line, $delimiter); 
+		}
+
+
+		// move back to beginng of file
+		fseek($f, 0);
+
+		//set headers to download file rather than display it 
+		header('Content-Type: text/csv');
+		header('Conten-Disposition: attachment; filename="' . $filename . '";');
+
+		// all ramaining data on a file pointer
+		fpassthru($f);
+	
+	
+
+
+	}
+	exit;
 
 /**
  * Adds a sub menu page for all subscribers.
@@ -1036,73 +1079,7 @@ function subscriber_page_handler()
 
 
 	</div>
-	<?php
-
-	if(!empty($_REQUEST['action']) && $_REQUEST['action']=='download-subscriber')
-	{
-		
-     
-		$table_data = new All_Subscriber_List();
-		$data       = $table_data->get_all_subscriber_fetch();
-		// echo"<pre>";
-		// print_r($data);
-		// echo"</pre>";
-		// exit();
-
-
-		$delimiter = ",";
-		$filename = "members-data_" . date('y-m-d') . ".csv";
-		// create a file pointer
-		$f =fopen('php://memory', 'w');
-		// set column headers
-		$fields = array('Mobileno', 'status');
-		
-		
-		foreach ($data as $line) { 
-			// generate csv lines from the inner arrays
-			fputcsv($f, $line, $delimiter); 
-		}
-
-
-		// move back to beginng of file
-		fseek($f, 0);
-
-		//set headers to download file rather than display it 
-		header('Content-Type: text/csv');
-		header('Conten-Disposition: attachment; filename="' . $filename . '";');
-
-		// all ramaining data on a file pointer
-		fpassthru($f);
 	
-	
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	}
-	//exit;
 	
 
 
