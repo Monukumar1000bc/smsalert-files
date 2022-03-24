@@ -963,7 +963,7 @@ class All_Subscriber_List extends WP_List_Table
 
 		global $wpdb;
 
-		$sql = "SELECT P.ID, P.post_author, P.post_title, P.post_status,P.post_content, PM.meta_value FROM {$wpdb->prefix}posts P inner join {$wpdb->prefix}postmeta PM on P.ID = PM.post_id WHERE P.post_type = 'sainstocknotifier' and PM.meta_key = 'smsalert_instock_pid'";
+		$sql = "SELECT P.post_title, P.post_status, PM.meta_value FROM {$wpdb->prefix}posts P inner join {$wpdb->prefix}postmeta PM on P.ID = PM.post_id WHERE P.post_type = 'sainstocknotifier' and PM.meta_key = 'smsalert_instock_pid'";
 
 		if (!empty($_REQUEST['orderby'])) {
 			$sql .= ' ORDER BY ' . sanitize_text_field(wp_unslash($_REQUEST['orderby']));
@@ -990,37 +990,46 @@ class All_Subscriber_List extends WP_List_Table
 	{
 		
      
+		
 		$table_data = new All_Subscriber_List();
-		$data       = $table_data->get_all_subscriber_fetch();
-		echo"<pre>";
-		print_r($data);
-		echo"</pre>";
-		exit();
+		$datas       = $table_data->get_all_subscriber_fetch();
+		foreach ( $datas as $data ) {
+			$row = array(
+				$data['post_title'],
+				$data['post_status'],
+			);
+			$data_rows[] = $row;
+			echo "<pre>";
+			print_r($data_rows);
 
-
-		$delimiter = ",";
-		$filename = "members-data_" . date('y-m-d') . ".csv";
-		// create a file pointer
-		$f =fopen('php://memory', 'w');
-		// set column headers
-		$fields = array('Mobileno', 'status');
-		
-		
-		foreach ($data as $line) { 
-			// generate csv lines from the inner arrays
-			fputcsv($f, $line, $delimiter); 
+			echo "<pre>";
+			exit();
 		}
+		
+
+		// $delimiter = ",";
+		// $filename = "members-data_" . date('y-m-d') . ".csv";
+		// // create a file pointer
+		// $f =fopen('php://memory', 'w');
+		// // set column headers
+		// $fields = array('Mobileno', 'status');
+		
+		
+		// foreach ($data as $line) { 
+		// 	// generate csv lines from the inner arrays
+		// 	fputcsv($f, $line, $delimiter); 
+		// }
 
 
-		// move back to beginng of file
-		fseek($f, 0);
+		// // move back to beginng of file
+		// fseek($f, 0);
 
-		//set headers to download file rather than display it 
-		header('Content-Type: text/csv');
-		header('Conten-Disposition: attachment; filename="' . $filename . '";');
+		// //set headers to download file rather than display it 
+		// header('Content-Type: text/csv');
+		// header('Conten-Disposition: attachment; filename="' . $filename . '";');
 
-		// all ramaining data on a file pointer
-		fpassthru($f);
+		// // all ramaining data on a file pointer
+		// fpassthru($f);
 	
 	
 
