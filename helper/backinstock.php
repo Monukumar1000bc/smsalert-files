@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
 	return;
 }
+
 /**SA_Abandoned_Cart class.*/
 class Sa_Backinstock {
 	/**Construct function.*/
@@ -681,13 +682,13 @@ class All_Subscriber_List extends WP_List_Table {
 	 * @param int $per_page   Page size.
 	 * @param int $page_number Page number.
 	 *
-	 * @return array
+	 * 
 	 */
-	public static function get_all_subscriber_fetch(  ) {
+	public static function get_all_subscriber_export(  ) {
 
 		global $wpdb;
 
-		$sql = "SELECT P.ID, P.post_author, P.post_title, P.post_status,P.post_content, PM.meta_value FROM {$wpdb->prefix}posts P inner join {$wpdb->prefix}postmeta PM on P.ID = PM.post_id WHERE P.post_type = 'sainstocknotifier' and PM.meta_key = 'smsalert_instock_pid'";
+		$sql = "SELECT  P.post_title, P.post_status FROM {$wpdb->prefix}posts P inner join {$wpdb->prefix}postmeta PM on P.ID = PM.post_id WHERE P.post_type = 'sainstocknotifier' and PM.meta_key = 'smsalert_instock_pid'";
 
 		if ( ! empty( $_REQUEST['orderby'] ) ) {
 			$sql .= ' ORDER BY ' . sanitize_text_field( wp_unslash( $_REQUEST['orderby'] ) );
@@ -700,8 +701,49 @@ class All_Subscriber_List extends WP_List_Table {
 		// $sql .= ' OFFSET ' . ( $page_number - 1 ) * $per_page;
 
 		$result = $wpdb->get_results( $sql, 'ARRAY_A' );
+	
 
-		return $result;
+		// return $result;
+		// Turn on output buffering
+		ob_start();
+
+		// Define handle to output stream
+		$basic_info   = fopen("php://output", 'w');
+
+		// Define and write header row to csv output 
+		$basic_header = array('Header1', 'Header2');  
+		fputcsv($basic_info, $basic_header);  
+
+		$count = 0; // Auxiliary variable to write csv header in a different way
+
+		// Get data for remaining rows and write this rows to csv output
+		foreach($result as $user_row){  
+			if ($count == 0) {
+				// Write select column's names as CSV header
+				fputcsv($basic_info, array_keys($user_row));  
+			} else {
+				//Write data row
+				fputcsv($basic_info, $user_row);
+			}
+			$count++;
+		}  
+
+		// Get size of output after last output data sent  
+		// $streamSize = ob_get_length();
+
+		//Close the filepointer
+		fclose($basic_info);  
+
+		// Send the raw HTTP headers
+		header('Content-Type: text/csv');
+		header('Content-Disposition: attachment; filename=test.csv');  
+		header('Expires: 0');  
+		header('Cache-Control: no-cache');
+		// header('Content-Length: '. ob_get_length());
+
+		// Flush (send) the output buffer and turn off output buffering
+		ob_end_flush();
+		
 	}
 
 	/**
@@ -937,6 +979,13 @@ class All_Subscriber_List extends WP_List_Table {
 	}
 }
 
+
+
+	
+	
+	
+	
+
 /**
  * Adds a sub menu page for all subscribers.
  *
@@ -970,7 +1019,22 @@ function subscriber_page_handler() {
 		/* translators: %d: Number of items deleted */
 		$message = '<div class="updated below-h2" id="message"><p>' . sprintf( __( 'Items deleted: %d', 'custom_table_example' ), $cnt ) . '</p></div>';
 	}
+
 	?>
+<!-- file manual by monu -->
+<?php
+if(!empty($_REQUEST['action']) && $_REQUEST['action']=='download-subscriber')
+{
+	
+ 
+	$table_data = new All_Subscriber_List();
+	$table_data-> get_all_subscriber_export();
+	
+}
+	
+
+?>
+
 <div class="wrap">
 	<div class="icon32 icon32-posts-post" id="icon-edit"><br></div>
 	<h2>All Subscriber</h2>
@@ -979,5 +1043,13 @@ function subscriber_page_handler() {
 		<input type="hidden" name="page" value="<?php echo esc_attr( empty( $_REQUEST['page'] ) ? '' : $_REQUEST['page'] ); ?>"/>
 		<?php $table_data->display(); ?>
 	</form>
+	<a href="admin.php?page=all-subscriber&action=download-subscriber" class="page-title-action"> Export </a>
 </div>
-<?php } ?>
+
+
+<?php
+
+
+}
+
+?>
