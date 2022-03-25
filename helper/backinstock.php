@@ -978,12 +978,10 @@ class All_Subscriber_List extends WP_List_Table
 	  
         $filename = 'All Subscriber' . time() . '.csv';
         $header_row = array(
-            'ID',
-            'post_author',
             'Mobile_Number',
             'Status',
-            'Register user',
-           'post_content',
+            'user',
+           'content',
 
         );
        $data_rows = array();
@@ -993,8 +991,6 @@ class All_Subscriber_List extends WP_List_Table
         foreach ( $result as $user ) 
         {
             $row = array(
-            $user['ID'],
-            $user['post_author'],
             $user['post_title'],
             $user['post_status'],
             $user['post_content'],
