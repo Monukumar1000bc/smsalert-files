@@ -950,36 +950,6 @@ class All_Subscriber_List extends WP_List_Table
 		return $this->items;
 	}
 
-	/**
-	 * Get all subscriber info.
-	 *
-	 * @param int $per_page   Page size.
-	 * @param int $page_number Page number.
-	 *
-	 * @return array
-	 */
-	public static function get_all_subscriber_fetch()
-	{
-
-		global $wpdb;
-
-		$sql = "SELECT P.post_title, P.post_status, PM.meta_value FROM {$wpdb->prefix}posts P inner join {$wpdb->prefix}postmeta PM on P.ID = PM.post_id WHERE P.post_type = 'sainstocknotifier' and PM.meta_key = 'smsalert_instock_pid'";
-
-		if (!empty($_REQUEST['orderby'])) {
-			$sql .= ' ORDER BY ' . sanitize_text_field(wp_unslash($_REQUEST['orderby']));
-			$sql .= !empty($_REQUEST['order']) ? ' ' . sanitize_text_field(wp_unslash($_REQUEST['order'])) : ' DESC';
-		} else {
-			$sql .= ' ORDER BY post_date desc';
-		}
-
-		// $sql .= " LIMIT $per_page";
-		// $sql .= ' OFFSET ' . ($page_number - 1) * $per_page;
-
-		$result = $wpdb->get_results($sql, 'ARRAY_A');
-
-		return $result;
-		
-	}
 
 
 
@@ -990,48 +960,61 @@ class All_Subscriber_List extends WP_List_Table
 	{
 		
      
-		
-		$table_data = new All_Subscriber_List();
-		$datas       = $table_data->get_all_subscriber_fetch();
-		foreach ( $datas as $data ) {
-			$row = array(
-				$data['post_title'],
-				$data['post_status'],
-			);
-			$data_rows[] = $row;
-			echo "<pre>";
-			print_r($data_rows);
+		global $wpdb;
 
-			echo "<pre>";
-			exit();
+		$sql = "SELECT P.ID, P.post_author, P.post_title, P.post_status,P.post_content, PM.meta_value FROM {$wpdb->prefix}posts P inner join {$wpdb->prefix}postmeta PM on P.ID = PM.post_id WHERE P.post_type = 'sainstocknotifier' and PM.meta_key = 'smsalert_instock_pid'";
+
+		if ( ! empty( $_REQUEST['orderby'] ) ) {
+			$sql .= ' ORDER BY ' . sanitize_text_field( wp_unslash( $_REQUEST['orderby'] ) );
+			$sql .= ! empty( $_REQUEST['order'] ) ? ' ' . sanitize_text_field( wp_unslash( $_REQUEST['order'] ) ) : ' DESC';
+		} else {
+			$sql .= ' ORDER BY post_date desc';
 		}
+
+		// $sql .= " LIMIT $per_page";
+		// $sql .= ' OFFSET ' . ( $page_number - 1 ) * $per_page;
+
 		
+	  
+        $filename = 'All Subscriber' . time() . '.csv';
+        $header_row = array(
+            'ID',
+            'post_author',
+            'Mobile_Number',
+            'Status',
+            'Register user',
+           'post_content',
 
-		// $delimiter = ",";
-		// $filename = "members-data_" . date('y-m-d') . ".csv";
-		// // create a file pointer
-		// $f =fopen('php://memory', 'w');
-		// // set column headers
-		// $fields = array('Mobileno', 'status');
+        );
+       $data_rows = array();
+
+
+       $result = $wpdb->get_results( $sql, 'ARRAY_A' );
+        foreach ( $result as $user ) 
+        {
+            $row = array(
+            $user['ID'],
+            $user['post_author'],
+            $user['post_title'],
+            $user['post_status'],
+            $user['post_content'],
+           
+            );
+            $data_rows[] = $row;
+        }
+        ob_end_clean ();
+        $fh = @fopen( 'php://output', 'w' );
+        header( "Content-Disposition: attachment; filename={$filename}" );
+        fputcsv( $fh, $header_row );
+        foreach ( $data_rows as $data_row ) 
+        {
+            fputcsv( $fh, $data_row );
+        }
+    
+        
+        exit();
 		
 		
-		// foreach ($data as $line) { 
-		// 	// generate csv lines from the inner arrays
-		// 	fputcsv($f, $line, $delimiter); 
-		// }
-
-
-		// // move back to beginng of file
-		// fseek($f, 0);
-
-		// //set headers to download file rather than display it 
-		// header('Content-Type: text/csv');
-		// header('Conten-Disposition: attachment; filename="' . $filename . '";');
-
-		// // all ramaining data on a file pointer
-		// fpassthru($f);
-	
-	
 
 
 	}
@@ -1074,16 +1057,19 @@ function subscriber_page_handler()
 	} ?>
 
 	<div class="wrap">
+		
 		<div class="icon32 icon32-posts-post" id="icon-edit"><br></div>
 		<h2>All Subscriber</h2>
 		<?php echo wp_kses_post($message); ?>
 		<form id="persons-table" method="GET">
 			<input type="hidden" name="page" value="<?php echo esc_attr(empty($_REQUEST['page']) ? '' : $_REQUEST['page']); ?>" />
 			<?php $table_data->display(); ?>
+			<a href="admin.php?page=all-subscriber&action=download-subscriber" style=" margin-right: 10px;" class="page-title-action">Export</a>
+			
 		</form>
 
 
-		<a href="admin.php?page=all-subscriber&action=download-subscriber" class="page-title-action">Export</a>
+		
 
 
 	</div>
