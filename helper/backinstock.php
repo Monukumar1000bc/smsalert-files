@@ -962,7 +962,7 @@ class All_Subscriber_List extends WP_List_Table
      
 		global $wpdb;
 
-		$sql = "SELECT P.ID, P.post_author, P.post_title, P.post_status,P.post_content, PM.meta_value FROM {$wpdb->prefix}posts P inner join {$wpdb->prefix}postmeta PM on P.ID = PM.post_id WHERE P.post_type = 'sainstocknotifier' and PM.meta_key = 'smsalert_instock_pid'";
+		$sql = "SELECT  P.post_title, P.post_status,P.post_content, PM.meta_value FROM {$wpdb->prefix}posts P inner join {$wpdb->prefix}postmeta PM on P.ID = PM.post_id WHERE P.post_type = 'sainstocknotifier' and PM.meta_key = 'smsalert_instock_pid'";
 
 		if ( ! empty( $_REQUEST['orderby'] ) ) {
 			$sql .= ' ORDER BY ' . sanitize_text_field( wp_unslash( $_REQUEST['orderby'] ) );
@@ -980,9 +980,7 @@ class All_Subscriber_List extends WP_List_Table
         $header_row = array(
             'Mobile_Number',
             'Status',
-            'user',
-           'content',
-
+            'content',
         );
        $data_rows = array();
 
