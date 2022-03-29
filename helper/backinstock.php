@@ -878,6 +878,7 @@ class All_Subscriber_List extends WP_List_Table
 		);
 		return $actions;
 	}
+	
 
 	/**
 	 * [OPTIONAL] This method processes bulk actions.
@@ -955,6 +956,7 @@ class All_Subscriber_List extends WP_List_Table
 
 }?>
 <?php
+
 
 	if(!empty($_REQUEST['action']) && $_REQUEST['action']=='download-subscriber')
 	{
@@ -1063,18 +1065,20 @@ function subscriber_page_handler()
 			
 			
 		</form>
-		<div class="dbutton" style="float:left;">
+		<form action="download-subscriber" method="POST" for="dogl-names" style="float:left;">
 			
-			<select name="dog-names" id="dog-names">
-			<option value="rigatoni">Subscribed</option>
-			<option value="dave">Vegitor</option>
+		 <select name="dogl-names" id="dogl-names">
+			<option value="Subscribed">Subscribed</option>
+			<option value="Vegitor">Vegitor</option>
+			<option value="All">All</option>
 			
-			</select>
+			</select> 
 			
+			<input type="button" name="submit" value="export">
 
-			<a href="admin.php?page=all-subscriber&action=download-subscriber" style="padding: 5px; margin-top:4px; float:right;" class="page-title-action">Export</a>
+			<!-- <a href="admin.php?page=all-subscriber&action=download-subscriber" style="padding: 5px; margin-top:4px; float:right;" class="page-title-action">Export</a> -->
 
-			</div>
+</form>
 		
 
 
