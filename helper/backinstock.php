@@ -1058,9 +1058,24 @@ function subscriber_page_handler()
 		<form id="persons-table" method="GET">
 			<input type="hidden" name="page" value="<?php echo esc_attr(empty($_REQUEST['page']) ? '' : $_REQUEST['page']); ?>" />
 			<?php $table_data->display(); ?>
-			<a href="admin.php?page=all-subscriber&action=download-subscriber" style=" margin-right: 10px;" class="page-title-action">Export</a>
+
+ 
+			
 			
 		</form>
+		<div class="dbutton" style="float:left;">
+			
+			<select name="dog-names" id="dog-names">
+			<option value="rigatoni">Subscribed</option>
+			<option value="dave">Vegitor</option>
+			
+			</select>
+			
+
+			<a href="admin.php?page=all-subscriber&action=download-subscriber" style="padding: 5px; margin-top:4px; float:right;" class="page-title-action">Export</a>
+
+			</div>
+		
 
 
 		
